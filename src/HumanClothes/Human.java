@@ -1,6 +1,19 @@
 package HumanClothes;
 
 public class Human {
+    private String name;
+    private IJacket jacket;
+    private ITrousers trousers;
+    private IBoots boots;
+
+    public Human(String name, IJacket jacket, ITrousers trousers, IBoots boots) {
+        this.name = name;
+        this.jacket = jacket;
+        this.trousers = trousers;
+        this.boots = boots;
+
+    }
+
     public String getName() {
         return name;
     }
@@ -33,18 +46,6 @@ public class Human {
         this.boots = boots;
     }
 
-    private String name;
-    private IJacket jacket;
-    private ITrousers trousers;
-    private IBoots boots;
-
-    public Human(String name, IJacket jacket, ITrousers trousers, IBoots boots) {
-        this.name = name;
-        this.jacket = jacket;
-        this.trousers = trousers;
-        this.boots = boots;
-
-    }
 
     public void toPutOn() {
         jacket.toDress();
